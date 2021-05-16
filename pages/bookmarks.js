@@ -52,7 +52,7 @@ const Bookmarks = ({
       />
       <div className="bookmark-background text-gray-300 px-4 sm:px-32 py-36 sm:py-48 relative">
         <div className="sm:px-32">
-          <h1 className="text-6xl sm:text-10xl font-black">Bookmarks</h1>
+          <h1 className="text-5xl sm:text-10xl font-black">Bookmarks</h1>
 
           <SubNav element={element} isSticky={isSticky} />
 

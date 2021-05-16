@@ -27,7 +27,7 @@ const MobileMenu = ({ onClose }) => {
         </button>
       </div>
 
-      <ul className="uppercase text-sm text-gray-400 font-bold text-5xl mt-16">
+      <ul className="uppercase text-sm text-gray-400 font-bold text-4xl mt-16">
         <ActiveLink activeClassName="active-class" href="/" passHref>
           <a onClick={onClose}>
             <li className="py-4">Home</li>

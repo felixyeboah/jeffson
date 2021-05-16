@@ -47,7 +47,7 @@ export default function Home({ allPosts }) {
           <div className="mt-20 sm:mt-40 sm:mb-28 px-4 sm:px-0">
             <div className="grid sm:grid-cols-2 gap-14">
               <div>
-                <h2 className="text-6xl sm:text-8xl text-white font-bold">
+                <h2 className="text-5xl sm:text-8xl text-white font-bold">
                   I build beautiful interfaces &amp; experiences
                 </h2>
               </div>
