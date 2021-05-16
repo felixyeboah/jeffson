@@ -38,26 +38,26 @@ const Blog = ({ post }) => {
       <div className="sm:pt-56 sm:pb-40 sm:px-72 bg-blogBg min-h-screen">
         <div className="grid grid-cols-2 gap-10">
           <div>
-            <h2 className="sm:text-8xl font-bold">{post.title}</h2>
+            <h2 className="sm:text-8xl font-bold">{post?.title}</h2>
             <div className="flex items-center mt-6">
               <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-tr from-purple-500 via-red-500 to-pink-500 rounded-full">
                 <img
                   className="rounded-full w-14 h-14 object-cover border"
-                  src={post.author.avatar}
-                  alt={post.author.name}
+                  src={post?.author?.avatar}
+                  alt={post?.author?.name}
                 />
               </div>
               <div className="ml-4">
-                <p className="font-bold sm:text-lg">{post.author.name}</p>
+                <p className="font-bold sm:text-lg">{post?.author?.name}</p>
                 <p className="text-gray-500 text-sm">
-                  {moment(post.date).format("LL")}
+                  {moment(post?.date).format("LL")}
                 </p>
               </div>
             </div>
           </div>
 
           <div>
-            <img className="rounded-lg" src={image} alt={post.title} />
+            <img className="rounded-lg" src={image} alt={post?.title} />
           </div>
         </div>
 
