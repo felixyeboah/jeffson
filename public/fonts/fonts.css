@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'MessinaSans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200;
+  src: url('./MessinaSans-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MessinaSans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url('./MessinaSans-Book.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MessinaSans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('./MessinaSans-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MessinaSans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url('./MessinaSans-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MessinaSans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url('./MessinaSans-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MessinaSans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src: url('./MessinaSans-Black.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MessinaMono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200;
+  src: url('./MessinaSansMono-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MessinaMono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('./MessinaSansMono-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MessinaMono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url('./MessinaSansMono-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MessinaMono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src: url('./MessinaSansMono-Black.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'OperatorMono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('./OperatorMonoBookRegular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'OperatorMono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url('./OperatorMonoMediumRegular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'OperatorMono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url('./OperatorMonoBoldRegular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'OperatorMono';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 700;
+  src: url('./OperatorMonoBoldItalic.otf') format('opentype');
+}
