@@ -6,15 +6,17 @@ const PodcastCard = ({ item }) => {
 
   return (
     <a href={item.url} target="_blank" rel="noreferrer">
-      <div className="bg-cardBg hover:bg-cardBgHover h-102 relative">
+      <div className="bg-cardBg hover:bg-cardBgHover sm:h-102 relative rounded-md">
         <img
-          className="rounded-tr-md rounded-tl-md"
+          className="rounded-tr-md rounded-tl-md h-96 sm:h-full"
           src={image}
           alt={item.name}
         />
         <div className="p-3">
           <h4 className="font-medium">{item.title}</h4>
-          <p className="text-sm text-gray-500 absolute bottom-3">{item.name}</p>
+          <p className="text-sm text-gray-500 sm:absolute bottom-3">
+            {item.name}
+          </p>
         </div>
       </div>
     </a>

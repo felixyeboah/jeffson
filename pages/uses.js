@@ -30,17 +30,17 @@ const Uses = ({ allUses }) => {
           cardType: "summary_large_image",
         }}
       />
-      <div className="bg-gray-800 text-gray-400 sm:pt-40 sm:pb-20 sm:px-40 min-h-screen font-uses">
-        <div className="w-3/5">
+      <div className="bg-gray-800 text-gray-400 pt-40 pb-16 sm:pb-20 px-4 sm:px-40 min-h-screen font-uses">
+        <div className="sm:w-3/5 w-full">
           <div>
-            <h3 className="font-uses font-bold sm:text-8xl text-white italic">
+            <h3 className="font-uses font-bold text-6xl sm:text-8xl text-white italic">
               Uses
             </h3>
-            <p className="mt-3 text-sm">Last Updated: 15/05/2021</p>
+            <p className="mt-3 text-xs sm:text-sm">Last Updated: 15/05/2021</p>
           </div>
 
           <div className="mt-4">
-            <p className="sm:text-xl leading-4">
+            <p className="sm:text-xl leading-5 sm:leading-4">
               I don't get asked about my work environment so often, but just in
               case if you want to know, here are the tools, devices and services
               I use to get things done. These are not the best ones, but I
@@ -50,10 +50,10 @@ const Uses = ({ allUses }) => {
           </div>
         </div>
 
-        <div className="w-3/5 sm:mt-20">
+        <div className="sm:w-3/5 w-full mt-14 sm:mt-20">
           {allUses.map((item) => (
-            <div key={item._id} className="sm:mb-20">
-              <h4 className="font-bold italic text-white sm:text-5xl mb-2">
+            <div key={item._id} className="mb-16 sm:mb-20">
+              <h4 className="font-bold italic text-white text-3xl sm:text-5xl mb-2">
                 {item.title}
               </h4>
               <ul>

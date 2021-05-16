@@ -6,7 +6,7 @@ const WebsiteCard = ({ item }) => {
 
   return (
     <a href={item.url} target="_blank" rel="noreferrer">
-      <div className="bg-cardBg hover:bg-cardBgHover h-72 relative">
+      <div className="bg-cardBg hover:bg-cardBgHover h-80 sm:h-72 relative rounded-md">
         <img
           className="rounded-tr-md rounded-tl-md"
           src={image}

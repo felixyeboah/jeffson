@@ -50,56 +50,56 @@ const Bookmarks = ({
           cardType: "summary_large_image",
         }}
       />
-      <div className="bookmark-background text-gray-300 sm:px-32 sm:py-48 relative">
+      <div className="bookmark-background text-gray-300 px-4 sm:px-32 py-36 sm:py-48 relative">
         <div className="sm:px-32">
-          <h1 className="sm:text-10xl font-black">Bookmarks</h1>
+          <h1 className="text-6xl sm:text-10xl font-black">Bookmarks</h1>
 
           <SubNav element={element} isSticky={isSticky} />
 
-          <section id="articles" className="pt-32">
+          <section id="articles" className="pt-20 sm:pt-32">
             <div className="mb-16">
               <h4 className="text-4xl">Articles</h4>
             </div>
-            <div className="grid grid-cols-3 gap-10">
+            <div className="grid sm:grid-cols-3 gap-6 sm:gap-10">
               {allBookmarks?.map((bookmark) => (
                 <ArticleCard key={bookmark._id} bookmark={bookmark} />
               ))}
             </div>
           </section>
 
-          <section id="inspirations" className="pt-32">
+          <section id="inspirations" className="pt-20 sm:pt-32">
             <div className="mb-16">
               <h4 className="text-4xl">Inspirational Channels and People</h4>
             </div>
-            <div className="grid grid-cols-8 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-8 gap-6 px-8 sm:px-0 text-center">
               {allInspirations.map((item) => (
                 <ProfileAvatar key={item._id} item={item} />
               ))}
             </div>
           </section>
 
-          <section id="websites" className="pt-32">
+          <section id="websites" className="pt-20 sm:pt-32">
             <div className="mb-16">
               <h4 className="text-4xl">Inspirational Websites</h4>
             </div>
 
-            <div className="grid grid-cols-4 gap-8">
+            <div className="grid sm:grid-cols-4 gap-8">
               {allWebsites?.map((website) => (
                 <WebsiteCard key={website._id} item={website} />
               ))}
             </div>
           </section>
 
-          <section id="videos" className="pt-32">
+          <section id="videos" className="pt-20 sm:pt-32">
             <div className="mb-16">
               <h4 className="text-4xl">Youtube Videos</h4>
             </div>
 
-            <div className="grid grid-cols-4 gap-8">
+            <div className="grid sm:grid-cols-4 gap-8">
               {allVideos.map((video) => (
                 <div
                   key={video._id}
-                  className="rounded-tr-md rounded-tl-md overflow-hidden bg-cardBg hover:bg-cardBgHover"
+                  className="rounded-tr-md rounded-tl-md overflow-hidden bg-cardBg hover:bg-cardBgHover rounded-md"
                 >
                   <iframe
                     className="w-full h-56"
@@ -117,12 +117,12 @@ const Bookmarks = ({
             </div>
           </section>
 
-          <section id="podcasts" className="pt-32">
+          <section id="podcasts" className="pt-20 sm:pt-32">
             <div className="mb-16">
               <h4 className="text-4xl">Podcasts</h4>
             </div>
 
-            <div className="grid grid-cols-4 gap-8">
+            <div className="grid sm:grid-cols-4 gap-8">
               {allPodcasts.map((item) => (
                 <PodcastCard key={item._id} item={item} />
               ))}

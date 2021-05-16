@@ -7,14 +7,14 @@ const Project = ({ project }) => {
   const image = imageBuilder.image(project?.coverImage).url();
   return (
     <div className={`bg-${project.backgroundcolor} sm:p-32`}>
-      <div className="grid grid-cols-6">
-        <div className="col-span-4">
+      <div className="grid sm:grid-cols-6 px-4 sm:px-0 pt-32 sm:py-0 sm:pb-0">
+        <div className="sm:col-span-4">
           <div className="sm:w-4/5 sm:mb-20">
             <p className={`text-${project.datecolor} mb-6`}>
               {moment(project.date).format("LL")}
             </p>
             <h2
-              className={`text-7xl text-${project.headingcolor} font-black mb-10`}
+              className={`text-5xl sm:text-7xl text-${project.headingcolor} font-black mb-10`}
             >
               {project.title}
             </h2>
@@ -26,13 +26,13 @@ const Project = ({ project }) => {
               />
             </p>
           </div>
-          <div>
+          <div className="hidden sm:block">
             <img src={image} alt={project.title} />
           </div>
         </div>
 
-        <div className="col-span-1" />
-        <div className="col-span-1 ">
+        <div className="sm:col-span-1" />
+        <div className="sm:col-span-1 mt-6 sm:mt-0">
           <div>
             <h5
               className={`text-${project.headingcolor} font-bold sm:text-2xl`}
@@ -63,6 +63,10 @@ const Project = ({ project }) => {
             </ul>
           </div>
         </div>
+      </div>
+
+      <div className="block sm:hidden mt-10">
+        <img src={image} alt={project.title} />
       </div>
     </div>
   );

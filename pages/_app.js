@@ -1,15 +1,25 @@
 import "styles/globals.css";
 import Navbar from "@components/Navbar";
-import React from "react";
+import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import NavbarLight from "@components/NavbarLight";
+import MobileMenu from "@components/MobileMenu";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
 function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
   const [showScroll, setShowScroll] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const onOpen = () => {
+    setIsOpen(true);
+  };
+
+  const onClose = () => {
+    setIsOpen(false);
+  };
 
   const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 400) {
@@ -32,10 +42,14 @@ function MyApp({ Component, pageProps }) {
       {pathname === "/blog" ||
       pathname === "/books" ||
       pathname === "/blog/[slug]" ? (
-        <NavbarLight />
+        <NavbarLight onOpen={onOpen} />
       ) : (
-        <Navbar />
+        <Navbar onOpen={onOpen} />
       )}
+      <AnimatePresence>
+        {isOpen && <MobileMenu onClose={onClose} />}
+      </AnimatePresence>
+
       <main>
         <Component {...pageProps} />
 

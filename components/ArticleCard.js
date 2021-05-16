@@ -6,9 +6,9 @@ const ArticleCard = ({ bookmark }) => {
   const image = imageBuilder.image(bookmark?.coverImage).url();
   return (
     <a href={bookmark.url} rel="noreferrer" target="_blank">
-      <div className="bg-cardBg hover:bg-cardBgHover sm:p-6 rounded-md sm:h-64 overflow-hidden relative">
-        <h2 className="text-2xl font-bold sm:mb-3">{bookmark.title}</h2>
-        <div className="max-h-12 overflow-hidden text-gray-400">
+      <div className="bg-cardBg hover:bg-cardBgHover p-6 rounded-md h-64 overflow-hidden relative">
+        <h2 className="text-xl sm:text-2xl font-bold mb-3">{bookmark.title}</h2>
+        <div className="max-h-16 sm:max-h-12 overflow-hidden text-gray-400 text-sm sm:text-md">
           <BlockContent
             blocks={bookmark?.body}
             projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}

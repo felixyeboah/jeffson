@@ -3,11 +3,11 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import ActiveLink from "@components/ActiveLink";
 
-const NavbarLight = () => {
+const NavbarLight = ({ onOpen }) => {
   const { pathname } = useRouter();
 
   return (
-    <nav className="flex items-center justify-between sm:px-10 absolute w-full text-gray-300 py-10 z-40">
+    <nav className="flex items-center justify-between px-6 sm:px-10 absolute w-full text-gray-300 py-10 z-40">
       {pathname !== "/books" ? (
         <Link href="/" passHref>
           <a>
@@ -25,7 +25,12 @@ const NavbarLight = () => {
           </a>
         </Link>
       )}
-      <ul className="flex items-center uppercase text-sm text-gray-600">
+
+      <button className="block sm:hidden" onClick={onOpen}>
+        <img src="/humberger.svg" alt="Humberger" />
+      </button>
+
+      <ul className="flex items-center uppercase text-sm text-gray-600 hidden sm:flex">
         <ActiveLink href="/" passHref activeClassName="active-class">
           <a className="hover:text-gray-800">
             <li className="sm:px-6 font-medium">Home</li>
