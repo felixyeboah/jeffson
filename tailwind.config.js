@@ -2,7 +2,7 @@ const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -37,7 +37,7 @@ module.exports = {
         cardBgHover: "rgba(25,37,59,0.6)",
         booksBg: "rgb(234, 233, 228)",
         booksCardBg: "rgba(255, 255, 255, 0.4)",
-        blogBg: 'rgb(227, 230, 236)'
+        blogBg: "rgb(227, 230, 236)",
       },
       fontSize: {
         "10xl": "10rem",
