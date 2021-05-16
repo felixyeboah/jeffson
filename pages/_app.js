@@ -29,7 +29,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div className="antialiased font-sans relative">
-      {pathname === "/blog" || pathname === "/books" ? (
+      {pathname === "/blog" ||
+      pathname === "/books" ||
+      pathname === "/blog/[slug]" ? (
         <NavbarLight />
       ) : (
         <Navbar />
@@ -51,7 +53,7 @@ function MyApp({ Component, pageProps }) {
                 y: 200,
                 transition: { duration: 0.6, ...transition },
               }}
-              className={`fixed bottom-6 right-4`}
+              className="fixed bottom-6 right-4"
             >
               <button onClick={scrollTop}>
                 <img src="/backtotop.svg" alt="Back to top" />

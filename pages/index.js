@@ -2,6 +2,7 @@ import { getAllPostsForHome } from "lib/api";
 import GridGallery from "@components/GridGallery";
 import moment from "moment";
 import { NextSeo } from "next-seo";
+import Link from "next/link";
 
 export default function Home({ allPosts }) {
   return (
@@ -80,23 +81,27 @@ export default function Home({ allPosts }) {
 
           <div className="grid grid-cols-3 gap-10">
             {allPosts.map((post) => (
-              <div key={post._id}>
-                <div className="h-56">
-                  <img
-                    className="h-full w-full object-cover"
-                    src={post.coverImage}
-                    alt={post.title}
-                  />
-                  <div className="mt-4">
-                    <p className="text-gray-400 text-sm">
-                      {moment(post.date).format("LL")}
-                    </p>
-                    <h5 className="sm:text-3xl mt-2 text-gray-300">
-                      {post.title}
-                    </h5>
+              <Link href={`/blog/${post.slug}`} passHref>
+                <a>
+                  <div key={post._id}>
+                    <div className="h-56">
+                      <img
+                        className="h-full w-full object-cover rounded-md"
+                        src={post.coverImage}
+                        alt={post.title}
+                      />
+                      <div className="mt-4">
+                        <p className="text-gray-400 text-sm">
+                          {moment(post.date).format("LL")}
+                        </p>
+                        <h5 className="sm:text-3xl mt-2 text-gray-300">
+                          {post.title}
+                        </h5>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </a>
+              </Link>
             ))}
           </div>
         </div>
