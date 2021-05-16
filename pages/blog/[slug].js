@@ -35,10 +35,10 @@ const Blog = ({ post }) => {
         }}
       />
 
-      <div className="sm:pt-56 sm:pb-40 sm:px-72 bg-blogBg min-h-screen">
-        <div className="grid grid-cols-2 gap-10">
+      <div className="pt-40 sm:pt-56 pb-32 sm:pb-40 px-4 sm:px-72 bg-blogBg min-h-screen">
+        <div className="grid sm:grid-cols-2 gap-10">
           <div>
-            <h2 className="sm:text-8xl font-bold">{post?.title}</h2>
+            <h2 className="text-6xl sm:text-8xl font-bold">{post?.title}</h2>
             <div className="flex items-center mt-6">
               <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-tr from-purple-500 via-red-500 to-pink-500 rounded-full">
                 <img
@@ -62,7 +62,7 @@ const Blog = ({ post }) => {
         </div>
 
         <div>
-          <div className="prose prose-lg mt-20 mx-auto">
+          <div className="prose prose-md sm:prose-lg mt-20 mx-auto">
             <BlockContent
               blocks={post?.body}
               projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
