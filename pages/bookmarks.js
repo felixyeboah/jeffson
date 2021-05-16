@@ -21,7 +21,6 @@ const Bookmarks = ({
   allVideos,
   allPodcasts,
 }) => {
-  console.log("podcasts", allPodcasts);
   const { isSticky, element } = useSticky();
 
   return (

@@ -6,9 +6,9 @@ const PodcastCard = ({ item }) => {
 
   return (
     <a href={item.url} target="_blank" rel="noreferrer">
-      <div className="bg-cardBg hover:bg-cardBgHover sm:h-102 relative rounded-md">
+      <div className="bg-cardBg hover:bg-cardBgHover sm:h-96 relative rounded-md">
         <img
-          className="rounded-tr-md rounded-tl-md h-96 sm:h-full"
+          className="rounded-tr-md rounded-tl-md h-80 sm:h-72 w-full"
           src={image}
           alt={item.name}
         />
