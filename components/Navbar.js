@@ -12,7 +12,7 @@ const Navbar = ({ onOpen }) => {
         <Link href="/" passHref>
           <a>
             <div className="font-black w-14 h-14 rounded-full bg-gradient-to-tr to-yellow-400 via-red-500 from-pink-500 flex items-center justify-center text-2xl">
-              YF
+              FY
             </div>
           </a>
         </Link>
@@ -20,7 +20,7 @@ const Navbar = ({ onOpen }) => {
         <ActiveLink href="/" passHref>
           <a>
             <div className="font-bold w-14 h-14 rounded-full bg-bgBlack text-gray-300 flex items-center justify-center text-2xl">
-              YF
+              FY
             </div>
           </a>
         </ActiveLink>
