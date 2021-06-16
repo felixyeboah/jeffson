@@ -1,10 +1,10 @@
-import "styles/globals.css";
-import Navbar from "@components/Navbar";
-import React, { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { useRouter } from "next/router";
-import NavbarLight from "@components/NavbarLight";
-import MobileMenu from "@components/MobileMenu";
+import 'styles/globals.css';
+import Navbar from '@components/Navbar';
+import React, { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useRouter } from 'next/router';
+import NavbarLight from '@components/NavbarLight';
+import MobileMenu from '@components/MobileMenu';
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -30,18 +30,18 @@ function MyApp({ Component, pageProps }) {
   };
 
   const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   React.useEffect(() => {
-    window.addEventListener("scroll", checkScrollTop);
+    window.addEventListener('scroll', checkScrollTop);
   }, []);
 
   return (
-    <div className="antialiased font-sans relative">
-      {pathname === "/blog" ||
-      pathname === "/books" ||
-      pathname === "/blog/[slug]" ? (
+    <div className='antialiased font-sans relative'>
+      {pathname === '/blog' ||
+      pathname === '/books' ||
+      pathname === '/blog/[slug]' ? (
         <NavbarLight onOpen={onOpen} />
       ) : (
         <Navbar onOpen={onOpen} />
@@ -67,10 +67,10 @@ function MyApp({ Component, pageProps }) {
                 y: 200,
                 transition: { duration: 0.6, ...transition },
               }}
-              className="fixed bottom-6 right-4"
+              className='fixed bottom-6 right-4'
             >
               <button onClick={scrollTop}>
-                <img src="/backtotop.svg" alt="Back to top" />
+                <img src='/backtotop.svg' alt='Back to top' />
               </button>
             </motion.div>
           )}
