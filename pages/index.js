@@ -20,7 +20,7 @@ export default function Home({ allPosts }) {
             'A self-taught Software Developer & Design-Minded, focused on building beautiful interfaces & experiences.',
           images: [
             {
-              url: 'https://i.imgur.com/oBTjOr0.png',
+              url: 'https://i.imgur.com/JiEadoT.png',
               width: 800,
               height: 600,
               alt: 'Og Image Alt',

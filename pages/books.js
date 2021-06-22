@@ -17,7 +17,7 @@ const Books = ({ allBooks }) => {
             'My favorite books and books that helped me in my development journey',
           images: [
             {
-              url: 'https://i.imgur.com/oBTjOr0.png',
+              url: 'https://i.imgur.com/JiEadoT.png',
               width: 800,
               height: 600,
               alt: 'Og Image Alt',

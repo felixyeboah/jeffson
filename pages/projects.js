@@ -16,7 +16,7 @@ const Projects = ({ allProjects }) => {
           description: 'List of all my projects.',
           images: [
             {
-              url: 'https://i.imgur.com/oBTjOr0.png',
+              url: 'https://i.imgur.com/JiEadoT.png',
               width: 800,
               height: 600,
               alt: 'Og Image Alt',

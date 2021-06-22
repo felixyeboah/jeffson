@@ -16,7 +16,7 @@ const Uses = ({ allUses }) => {
             "I don't get asked about my work environment so often, but just in case if you want to know, here are the tools, devices and services I use to get things done.",
           images: [
             {
-              url: 'https://i.imgur.com/oBTjOr0.png',
+              url: 'https://i.imgur.com/JiEadoT.png',
               width: 800,
               height: 600,
               alt: 'Og Image Alt',
