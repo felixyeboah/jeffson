@@ -78,34 +78,24 @@ export default function Home({ allPosts }) {
                   startups, and companies that helped to improve not only my
                   skills but also my life.
                 </p>
-                <div className='flex items-center flex-wrap mt-4'>
+                <div className='flex items-center flex-wrap mt-4 text-2xl block md:hidden'>
                   <a href='mailto:me@felixyeboah.dev' target='_blank'>
-                    <button className='flex items-center bg-gray-200 text-gray-700 px-5 py-2 rounded-md font-medium hover:bg-gray-300'>
-                      <HiMail className='mr-2' /> Email Me
-                    </button>
+                      <HiMail className='mr-6' />
                   </a>
                   <a href='https://github.com/jaeyholic' target='_blank'>
-                    <button className='flex items-center bg-gray-200 text-gray-700 px-5 py-2 rounded-md font-medium ml-2 hover:bg-gray-300'>
-                      <FaGithub className='mr-2' /> Github
-                    </button>
+                      <FaGithub className='mr-6' />
                   </a>
                   <a
                     href='https://www.linkedin.com/in/felixyeboahjefferson/'
                     target='_blank'
-                    className='mt-2 sm:mt-0 mr-2 sm:mr-0'
                   >
-                    <button className='flex items-center bg-gray-200 text-gray-700 px-5 py-2 rounded-md sm:mx-2 font-medium hover:bg-gray-300'>
-                      <FaLinkedin className='mr-2' /> LinkedIn
-                    </button>
+                      <FaLinkedin className='mr-6' />
                   </a>
                   <a
                     href='https://twitter.com/sudocode_'
                     target='_blank'
-                    className='mt-2 sm:mt-0'
                   >
-                    <button className='flex items-center bg-gray-200 text-gray-700 px-5 py-2 rounded-md font-medium hover:bg-gray-300'>
-                      <FaTwitter className='mr-2' /> Twitter
-                    </button>
+                      <FaTwitter className='mr-6' />
                   </a>
                 </div>
               </div>

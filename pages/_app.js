@@ -5,6 +5,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import NavbarLight from '@components/NavbarLight';
 import MobileMenu from '@components/MobileMenu';
+import {HiMail} from "react-icons/hi";
+import {FaGithub, FaLinkedin, FaTwitter} from "react-icons/fa";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -50,8 +52,23 @@ function MyApp({ Component, pageProps }) {
         {isOpen && <MobileMenu onClose={onClose} />}
       </AnimatePresence>
 
-      <main>
+      <main className="relative">
         <Component {...pageProps} />
+
+        <ul className="fixed left-12 bottom-0 flex items-center justify-center flex-col text-white sm:text-2xl hidden md:block">
+          <a href='mailto:me@felixyeboah.dev' target='_blank' className="block"><li className="mb-6"><HiMail /></li></a>
+          <a href='https://github.com/jaeyholic' target='_blank' className="block"><li className="mb-6"><FaGithub /></li></a>
+          <a
+              href='https://www.linkedin.com/in/felixyeboahjefferson/'
+              target='_blank' className="block"
+          ><li className="mb-6"><FaLinkedin /></li></a>
+          <a
+              href='https://twitter.com/sudocode_'
+              target='_blank' className="block"
+          ><li className="mb-6"><FaTwitter /></li></a>
+          <li className="border-l h-16 ml-2" />
+        </ul>
+
 
         <AnimatePresence>
           {showScroll && (
