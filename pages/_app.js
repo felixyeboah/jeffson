@@ -7,6 +7,7 @@ import NavbarLight from '@components/NavbarLight';
 import MobileMenu from '@components/MobileMenu';
 import {HiMail} from "react-icons/hi";
 import {FaGithub, FaLinkedin, FaTwitter} from "react-icons/fa";
+import { init } from 'lib/ga';
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -37,6 +38,10 @@ function MyApp({ Component, pageProps }) {
 
   React.useEffect(() => {
     window.addEventListener('scroll', checkScrollTop);
+  }, []);
+
+  React.useEffect(() => {
+    init(process.env.NEXT_PUBLIC_G);
   }, []);
 
   return (
