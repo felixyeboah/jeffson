@@ -13,7 +13,7 @@ import DarkBlockCard from "@components/DarkBlockCard";
 const Blog = ({ post, posts }) => {
   const image = imageBuilder.image(post?.coverImage).url();
 
-  const filteredPost = posts.filter((item) => item._id !== post._id);
+  const filteredPost = posts?.filter((item) => item._id !== post._id);
   console.log("more posts", filteredPost);
 
   return (
