@@ -14,6 +14,7 @@ import videos from "./videos";
 import podcast from "./podcast";
 import books from "./books";
 import uses from "./uses";
+import comment from "./comment";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -33,5 +34,6 @@ export default createSchema({
     podcast,
     books,
     uses,
+    comment,
   ]),
 });

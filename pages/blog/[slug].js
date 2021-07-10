@@ -9,12 +9,26 @@ import BlockContent from "@sanity/block-content-to-react";
 import { NextSeo } from "next-seo";
 import moment from "moment";
 import DarkBlockCard from "@components/DarkBlockCard";
+import { Form } from "@components/Form";
 
 const Blog = ({ post, posts }) => {
   const image = imageBuilder.image(post?.coverImage).url();
 
   const filteredPost = posts?.filter((item) => item._id !== post._id);
-  console.log("more posts", filteredPost);
+
+  const getInitials = (name) => {
+    let full_name = name?.split(" ");
+    let initials = full_name[0][0];
+    if (name) {
+      if (full_name?.length >= 2 && full_name[1]) {
+        initials += full_name[1][0];
+        return initials;
+      }
+    } else {
+      initials = "";
+      return initials;
+    }
+  };
 
   return (
     <>
@@ -78,6 +92,35 @@ const Blog = ({ post, posts }) => {
                 dataset="production"
               />
             </div>
+          </div>
+
+          <div className="px-4 sm:px-64 mt-16">
+            <div className="mb-6">
+              <h3 className="font-bold text-xl sm:text-3xl">Post a comment</h3>
+              <p className="text-gray-600">
+                Have anything to share? Please post a comment
+              </p>
+            </div>
+            <Form _id={post?._id} />
+          </div>
+
+          <div className="px-4 sm:px-64 mt-16">
+            {post?.comments?.map((item) => (
+              <div key={item?._id} className="mb-6">
+                <div className="flex items-center">
+                  <div className="flex items-center justify-center sm:w-12 sm:h-12 rounded-full bg-blue-600 text-white font-bold text-xl">
+                    {getInitials(item?.name) || item?.name?.split(" ")[0][0]}
+                  </div>
+                  <div className="flex items-center">
+                    <h6 className="font-bold sm:text-xl ml-3">{item?.name}</h6>
+                    <p className="ml-6 text-sm text-gray-500">
+                      {moment(item?._createdAt).format("LL")}
+                    </p>
+                  </div>
+                </div>
+                <p className="mt-2">{item?.comment}</p>
+              </div>
+            ))}
           </div>
         </div>
 
