@@ -88,7 +88,7 @@ const Blog = ({ post, posts }) => {
             </h2>
 
             <div className="grid sm:grid-cols-3 sm:gap-10">
-              {filteredPost.map((post) => (
+              {filteredPost?.map((post) => (
                 <DarkBlockCard key={post._id} post={post} />
               ))}
             </div>
