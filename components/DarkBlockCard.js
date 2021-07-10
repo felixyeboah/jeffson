@@ -17,7 +17,7 @@ const DarkBlockCard = ({ post }) => {
               alt={post.title}
             />
           </div>
-          <div className="sm:mt-3 text-white">
+          <div className="mt-3 text-white">
             <p className="text-xs sm:text-sm text-gray-400">
               {moment(post.date).format("LL")}
             </p>
