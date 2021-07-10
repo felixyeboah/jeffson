@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
-    "@sanity/client": "^2.10.5",
+    "@sanity/client": "^2.11.0",
     "@sanity/image-url": "^0.140.22",
     "@tailwindcss/line-clamp": "^0.2.0",
     "@tailwindcss/typography": "^0.4.0",
