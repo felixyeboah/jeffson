@@ -98,7 +98,11 @@ const Blog = ({ post, posts }) => {
           </div>
 
           <div className="flex items-center justify-center">
-            <ClapButton namespace={post?.title} id={post?._id} />
+            <ClapButton
+              namespace="post"
+              id={post?._id}
+              component={ClapButton.templates.Medium}
+            />
           </div>
 
           <div className="px-4 sm:px-64 mt-16">
