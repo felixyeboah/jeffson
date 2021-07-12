@@ -132,7 +132,7 @@ const Blog = ({ post, posts }) => {
               More Posts
             </h2>
 
-            <div className="grid sm:grid-cols-3 gap-7 sm:gap-10">
+            <div className="grid sm:grid-cols-3 gap-8 sm:gap-10">
               {filteredPost?.map((post) => (
                 <DarkBlockCard key={post._id} post={post} />
               ))}
