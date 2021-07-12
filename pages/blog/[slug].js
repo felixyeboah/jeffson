@@ -10,6 +10,7 @@ import { NextSeo } from "next-seo";
 import moment from "moment";
 import DarkBlockCard from "@components/DarkBlockCard";
 import { Form } from "@components/Form";
+import { ClapButton } from "@lyket/react";
 
 const Blog = ({ post, posts }) => {
   const image = imageBuilder.image(post?.coverImage).url();
@@ -94,6 +95,10 @@ const Blog = ({ post, posts }) => {
                 dataset="production"
               />
             </div>
+          </div>
+
+          <div className="flex items-center justify-center">
+            <ClapButton namespace={post?.title} id={post?._id} />
           </div>
 
           <div className="px-4 sm:px-64 mt-16">
