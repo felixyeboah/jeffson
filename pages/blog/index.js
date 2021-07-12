@@ -40,19 +40,15 @@ const Index = ({ allPosts }) => {
           </div>
 
           <div className="pt-14 sm:pt-20 px-4 sm:px-32">
-            {allPosts
-              .filter((e) => e.category === "featured")
-              .map((post) => (
-                <FeaturedBlogCard key={post._id} post={post} />
-              ))}
+            {allPosts.slice(0, 1).map((post) => (
+              <FeaturedBlogCard key={post._id} post={post} />
+            ))}
           </div>
 
-          <div className="grid sm:grid-cols-3 sm:gap-10 sm:mt-20 sm:px-32">
-            {allPosts
-              .filter((e) => e.category !== "featured")
-              .map((post) => (
-                <BlogCard key={post._id} post={post} />
-              ))}
+          <div className="grid sm:grid-cols-3 gap-7 sm:gap-10 mt-14 sm:mt-20 px-4 sm:px-32">
+            {allPosts.map((post) => (
+              <BlogCard key={post._id} post={post} />
+            ))}
           </div>
         </div>
 

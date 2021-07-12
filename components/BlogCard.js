@@ -8,7 +8,7 @@ const BlogCard = ({ post }) => {
 
   return (
     <Link href={`/blog/${post?.slug}`} passHref>
-      <a>
+      <a className="block sm:h-98 overflow-hidden">
         <div className="block">
           <div className="sm:col-span-4">
             <img

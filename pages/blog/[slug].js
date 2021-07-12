@@ -61,7 +61,9 @@ const Blog = ({ post, posts }) => {
         <div className="pt-40 sm:pt-56 pb-32 sm:pb-40 px-4 sm:px-72 min-h-screen">
           <div className="grid sm:grid-cols-2 gap-10">
             <div>
-              <h2 className="text-6xl sm:text-8xl font-bold">{post?.title}</h2>
+              <h2 className="text-5xl sm:text-7xl font-bold leading-10">
+                {post?.title}
+              </h2>
               <div className="flex items-center mt-6">
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-tr from-purple-500 via-red-500 to-pink-500 rounded-full">
                   <img
