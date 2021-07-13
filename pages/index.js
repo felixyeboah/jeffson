@@ -106,7 +106,7 @@ export default function Home({ allPosts }) {
               Recent Posts
             </h4>
 
-            <div className="grid sm:grid-cols-3 gap-10">
+            <div className="grid sm:grid-cols-3 gap-32 sm:gap-10">
               {allPosts.slice(0, 3).map((post) => (
                 <Link href={`/blog/${post.slug}`} passHref>
                   <a>
