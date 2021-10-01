@@ -32,14 +32,14 @@ const GridGallery = () => {
           <div className="bg-bgLight rounded-sm p-2">
             <img
               className="h-full w-full object-scale-down rounded-md"
-              src="/images/eae.jpg"
+              src="/images/curatedbyculture.jpg"
               alt=""
             />
           </div>
           <div className="bg-bgLight rounded-sm p-2">
             <img
               className="h-full w-full object-scale-down rounded-md"
-              src="/images/xparf.png"
+              src="/images/eae.jpg"
               alt=""
             />
           </div>
@@ -50,7 +50,7 @@ const GridGallery = () => {
           <div className="bg-bgLight rounded-sm p-2">
             <img
               className="h-full w-full object-scale-down rounded-md"
-              src="/images/ntetsia.png"
+              src="/images/xparf.png"
               alt=""
             />
           </div>
@@ -65,7 +65,7 @@ const GridGallery = () => {
         <div className="sm:h-100 bg-gray-100 sm:col-span-4 p-6 bg-bgLight rounded-sm">
           <div className="hidden sm:block">
             <Image
-              src="/images/digifarmer.png"
+              src="/images/digifarmer.jpg"
               alt="digital farmer Dashboard"
               width={711}
               height={450}

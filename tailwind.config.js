@@ -10,6 +10,7 @@ module.exports = {
         sans: ["Poppins", ...defaultTheme.fontFamily.sans],
         serif: ["Playfair Display", ...defaultTheme.fontFamily.serif],
         uses: ["OperatorMono", ...defaultTheme.fontFamily.serif],
+        blog: ["Larsseit", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         fuchsia: colors.fuchsia,
@@ -38,6 +39,7 @@ module.exports = {
         booksBg: "rgb(234, 233, 228)",
         booksCardBg: "rgba(255, 255, 255, 0.4)",
         blogBg: "rgb(227, 230, 236)",
+        curated: '#2D4298'
       },
       fontSize: {
         "10xl": "10rem",

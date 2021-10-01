@@ -21,7 +21,7 @@ const DarkBlockCard = ({ post }) => {
             <p className="text-xs sm:text-sm text-gray-400">
               {moment(post.date).format("LL")}
             </p>
-            <h3 className="text-2xl sm:text-3xl mt-3 font-bold">
+            <h3 className="text-2xl sm:text-3xl mt-3 font-bold font-blog">
               {post.title}
             </h3>
             <p className="text-gray-300 mt-5 text-sm sm:text-md line-clamp-3">

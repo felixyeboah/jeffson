@@ -62,7 +62,7 @@ const Blog = ({ post, posts }) => {
         <div className="pt-40 sm:pt-56 pb-32 sm:pb-40 px-4 sm:px-72 min-h-screen">
           <div className="grid sm:grid-cols-2 gap-10">
             <div>
-              <h2 className="text-5xl sm:text-7xl font-bold leading-10">
+              <h2 className="text-5xl sm:text-7xl font-bold leading-10 font-blog">
                 {post?.title}
               </h2>
               <div className="flex items-center mt-6">
@@ -107,7 +107,9 @@ const Blog = ({ post, posts }) => {
 
           <div className="px-4 sm:px-64 mt-16">
             <div className="mb-6">
-              <h3 className="font-bold text-xl sm:text-3xl">Post a comment</h3>
+              <h3 className="font-bold text-xl sm:text-3xl font-blog">
+                Post a comment
+              </h3>
               <p className="text-gray-600">
                 Have anything to share? Please post a comment
               </p>

@@ -5,6 +5,7 @@ import moment from "moment";
 
 const Project = ({ project }) => {
   const image = imageBuilder.image(project?.coverImage).url();
+
   return (
     <div className={`bg-${project.backgroundcolor} sm:p-32`}>
       <div className="grid sm:grid-cols-6 px-4 sm:px-0 pt-32 sm:py-0 sm:pb-0">
