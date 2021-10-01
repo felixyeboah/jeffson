@@ -2,7 +2,7 @@ import React from "react";
 import Project from "@components/Project";
 import { getAllPostsForProjects } from "../lib/api";
 import { NextSeo } from "next-seo";
-import DefaultProject from "@components/DefaultProject";
+import ProjectCard from "@components/projectCard";
 
 const Projects = ({ allProjects }) => {
   const data = {
@@ -53,7 +53,7 @@ const Projects = ({ allProjects }) => {
         }}
       />
       <div className="">
-        <DefaultProject project={data} />
+        <ProjectCard project={data} />
         {allProjects.map((project) => (
           <Project key={project._id} project={project} />
         ))}
