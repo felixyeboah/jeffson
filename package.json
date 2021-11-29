@@ -8,28 +8,28 @@
     "start": "next start"
   },
   "dependencies": {
-    "@lyket/react": "^1.4.7",
+    "@lyket/react": "^1.4.8",
     "@sanity/block-content-to-react": "^3.0.0",
-    "@sanity/client": "^2.11.0",
-    "@sanity/image-url": "^0.140.22",
-    "@tailwindcss/line-clamp": "^0.2.0",
-    "@tailwindcss/typography": "^0.4.0",
+    "@sanity/client": "^2.21.10",
+    "@sanity/image-url": "^1.0.1",
+    "@tailwindcss/line-clamp": "^0.2.2",
+    "@tailwindcss/typography": "^0.4.1",
     "babel-plugin-module-resolver": "^4.1.0",
-    "framer-motion": "^4.1.16",
+    "framer-motion": "^5.3.3",
     "ga-4-react": "^0.1.281",
     "moment": "^2.29.1",
-    "next": "10.2.0",
-    "next-seo": "^4.24.0",
+    "next": "12.0.4",
+    "next-seo": "^4.28.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-hook-form": "^7.10.1",
-    "react-icons": "^4.2.0",
+    "react-hook-form": "^7.20.4",
+    "react-icons": "^4.3.1",
     "react-rough-notation": "^1.0.1",
-    "react-scroll": "^1.8.2"
+    "react-scroll": "^1.8.4"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.15",
-    "tailwindcss": "^2.1.2"
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "tailwindcss": "^2.2.19"
   }
 }
