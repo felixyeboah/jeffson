@@ -53,9 +53,8 @@ const Books = ({ allBooks }) => {
             </div>
             <div className='sm:px-56 text-center pt-6 text-gray-600 text-sm sm:text-md'>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Consectetur cum ex fuga in libero nobis praesentium temporibus
-                vero? Modi, recusandae!
+                These are books I find joy in reading. I will keep updating the
+                list the moment I find joy in other books.
               </p>
             </div>
           </div>

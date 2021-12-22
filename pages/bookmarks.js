@@ -6,13 +6,14 @@ import {
   getAllPostsForVideos,
   getAllPostsForWebsites,
 } from '../lib/api';
-import ArticleCard from '@components/ArticleCard';
 import SubNav from '@components/SubNav';
-import ProfileAvatar from '@components/ProfileAvatar';
 import useSticky from 'hooks/useSticky';
-import WebsiteCard from '@components/WebsiteCard';
 import { NextSeo } from 'next-seo';
-import PodcastCard from '@components/PodcastCard';
+import BookmarkSection from '@components/BookmarkSection';
+import InspirationsSection from '@components/InspirationsSection';
+import InsirationalWebsites from '@components/InsirationalWebsites';
+import AllVideosSection from '@components/AllVideosSection';
+import PodcastsSection from '@components/PodcastsSection';
 
 const Bookmarks = ({
   allBookmarks,
@@ -56,78 +57,15 @@ const Bookmarks = ({
 
             <SubNav element={element} isSticky={isSticky} />
 
-            <section id='articles' className='pt-20 sm:pt-32'>
-              <div className='mb-16'>
-                <h4 className='text-4xl'>Articles</h4>
-              </div>
-              <div className='grid sm:grid-cols-3 gap-6 sm:gap-10'>
-                {allBookmarks?.map((bookmark) => (
-                  <ArticleCard key={bookmark._id} bookmark={bookmark} />
-                ))}
-              </div>
-            </section>
+            <BookmarkSection allBookmarks={allBookmarks} />
 
-            <section id='inspirations' className='pt-20 sm:pt-32'>
-              <div className='mb-16'>
-                <h4 className='text-4xl'>Inspirational Channels and People</h4>
-              </div>
-              <div className='grid grid-cols-2 sm:grid-cols-8 gap-6 px-8 sm:px-0 text-center'>
-                {allInspirations.map((item) => (
-                  <ProfileAvatar key={item._id} item={item} />
-                ))}
-              </div>
-            </section>
+            <InspirationsSection allInspirations={allInspirations} />
 
-            <section id='websites' className='pt-20 sm:pt-32'>
-              <div className='mb-16'>
-                <h4 className='text-4xl'>Inspirational Websites</h4>
-              </div>
+            <InsirationalWebsites allWebsites={allWebsites} />
 
-              <div className='grid sm:grid-cols-4 gap-8'>
-                {allWebsites?.map((website) => (
-                  <WebsiteCard key={website._id} item={website} />
-                ))}
-              </div>
-            </section>
+            <AllVideosSection allVideos={allVideos} />
 
-            <section id='videos' className='pt-20 sm:pt-32'>
-              <div className='mb-16'>
-                <h4 className='text-4xl'>Youtube Videos</h4>
-              </div>
-
-              <div className='grid sm:grid-cols-4 gap-8'>
-                {allVideos.map((video) => (
-                  <div
-                    key={video._id}
-                    className='rounded-tr-md rounded-tl-md overflow-hidden bg-cardBg hover:bg-cardBgHover rounded-md'
-                  >
-                    <iframe
-                      className='w-full h-56'
-                      src={video.url}
-                      title='YouTube video player'
-                      frameBorder='0'
-                      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                      allowFullScreen
-                    />
-                    <div className='p-3'>
-                      <h4 className='font-medium'>{video.title}</h4>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            <section id='podcasts' className='pt-20 sm:pt-32'>
-              <div className='mb-16'>
-                <h4 className='text-4xl'>Podcasts</h4>
-              </div>
-
-              <div className='grid sm:grid-cols-4 gap-8'>
-                {allPodcasts.map((item) => (
-                  <PodcastCard key={item._id} item={item} />
-                ))}
-              </div>
-            </section>
+            <PodcastsSection allPodcasts={allPodcasts} />
           </div>
         </div>
 
