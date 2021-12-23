@@ -20,7 +20,7 @@ const RecentPostList = ({ allPosts }) => {
 
       <div className='grid sm:grid-cols-3 gap-20 sm:gap-10'>
         {allPosts.slice(0, 3).map((post) => (
-          <PostCard post={post} variant='home' />
+          <PostCard key={post._id} post={post} variant='home' />
         ))}
       </div>
     </div>

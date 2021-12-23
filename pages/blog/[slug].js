@@ -11,11 +11,18 @@ import moment from 'moment';
 import { Form } from '@components/Form';
 import { ClapButton } from '@lyket/react';
 import PostCard from '@components/PostCard';
+import { motion, useTransform, useViewportScroll } from 'framer-motion';
+import Link from 'next/link';
+import { BsArrowLeft } from 'react-icons/bs';
 
-const Blog = ({ post, posts }) => {
+const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
+
+const Blog = ({ post, posts, morePosts }) => {
+  const [canScroll, setCanScroll] = React.useState(false);
+  const { scrollYProgress } = useViewportScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.4]);
   const image = urlFor(post?.coverImage).url();
-
-  const filteredPost = posts?.filter((item) => item._id !== post._id);
 
   const getInitials = (name) => {
     let full_name = name?.split(' ');
@@ -30,6 +37,14 @@ const Blog = ({ post, posts }) => {
       return initials;
     }
   };
+
+  React.useEffect(() => {
+    if (!canScroll) {
+      document.querySelector('body').classList.add('no-scroll');
+    } else {
+      document.querySelector('body').classList.remove('no-scroll');
+    }
+  }, [canScroll]);
 
   return (
     <>
@@ -60,7 +75,15 @@ const Blog = ({ post, posts }) => {
 
       <div className='bg-blogBg'>
         <div className='pt-40 sm:pt-56 pb-32 sm:pb-40 px-4 sm:px-72 min-h-screen'>
-          <div className='grid sm:grid-cols-2 gap-10'>
+          <Link href='/blog' passHref>
+            <a>
+              <div className='flex items-center font-medium space-x-2 sm:mb-24 sm:text-xl'>
+                <BsArrowLeft />
+                <p>Back to overview</p>
+              </div>
+            </a>
+          </Link>
+          <div className='space-y-10'>
             <div>
               <h2 className='text-5xl sm:text-7xl font-bold leading-10 font-blog'>
                 {post?.title}
@@ -82,9 +105,25 @@ const Blog = ({ post, posts }) => {
               </div>
             </div>
 
-            <div>
-              <img className='rounded-lg' src={image} alt={post?.title} />
-            </div>
+            <motion.div
+              initial={{ x: '50%', width: '383px', height: '35rem' }}
+              animate={{
+                x: 0,
+                width: '100%',
+                height: '43rem',
+                transition: { delay: 0.2, ...transition },
+              }}
+              className='rounded-lg overflow-hidden h-100'
+            >
+              <motion.img
+                style={{ scale: scale, opacity: opacity }}
+                initial={{ scale: 1.1 }}
+                animate={{ y: -20, transition: { delay: 0.2, ...transition } }}
+                className='w-full h-full object-cover'
+                src={image}
+                alt={post?.title}
+              />
+            </motion.div>
           </div>
 
           <div>
@@ -150,8 +189,8 @@ const Blog = ({ post, posts }) => {
             </h2>
 
             <div className='grid sm:grid-cols-3 gap-8 sm:gap-10'>
-              {filteredPost?.map((post) => (
-                <PostCard post={post} variant='home' />
+              {morePosts?.map((post) => (
+                <PostCard key={post._id} post={post} variant='home' />
               ))}
             </div>
           </div>

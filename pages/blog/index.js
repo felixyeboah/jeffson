@@ -46,9 +46,9 @@ const Index = ({ allPosts }) => {
             ))}
           </div>
 
-          <div className='grid sm:grid-cols-3 gap-8 sm:gap-8 mt-14 sm:mt-20 px-4 sm:px-32'>
+          <div className='grid sm:grid-cols-3 gap-12 sm:gap-8 mt-14 sm:mt-20 px-4 sm:px-32'>
             {allPosts.map((post) => (
-              <PostCard post={post} variant='blog' />
+              <PostCard key={post._id} post={post} variant='blog' />
             ))}
           </div>
         </div>

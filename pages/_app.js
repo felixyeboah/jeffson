@@ -67,7 +67,9 @@ function MyApp({ Component, pageProps }) {
         </AnimatePresence>
 
         <main className='relative'>
-          <Component {...pageProps} />
+          <AnimatePresence initial={false} exitBeforeEnter>
+            <Component {...pageProps} />
+          </AnimatePresence>
 
           <SocialLinks />
           <ScrollToTop scrollTop={scrollTop} showScroll={showScroll} />

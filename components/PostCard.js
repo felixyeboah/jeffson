@@ -45,7 +45,7 @@ const PostCard = ({ post, variant }) => {
             className='space-y-2 sm:space-y-4 mt-10'
           >
             <p className='text-lg sm:text-xl font-medium text-gray-400'>
-              {moment(post.date).format('LL')} - {post.category}
+              {moment(post.date).format('LL')}
             </p>
             <h2 className='font-medium text-2xl sm:text-4xl'>{post.title}</h2>
           </motion.div>
