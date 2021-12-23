@@ -76,7 +76,7 @@ const Blog = ({ post, posts }) => {
                 <div className='ml-4'>
                   <p className='font-bold sm:text-lg'>{post?.author?.name}</p>
                   <p className='text-gray-500 text-sm'>
-                    {moment(post?.date).format('LL')}
+                    {moment.utc(post?.date).format('LL')}
                   </p>
                 </div>
               </div>
