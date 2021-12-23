@@ -1,5 +1,4 @@
 import React from 'react';
-import { urlFor } from 'lib/sanity';
 import {
   getAllPostsForHome,
   getAllPostsWithSlug,
@@ -22,7 +21,6 @@ const Blog = ({ post, morePosts }) => {
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.4]);
-  const image = urlFor(post?.coverImage).url();
 
   const getInitials = (name) => {
     let full_name = name?.split(' ');
@@ -46,6 +44,8 @@ const Blog = ({ post, morePosts }) => {
     }
   }, [canScroll]);
 
+  const date = new Date(post?.date);
+
   return (
     <>
       <NextSeo
@@ -58,7 +58,7 @@ const Blog = ({ post, morePosts }) => {
           description: post?.excerpt,
           images: [
             {
-              url: image,
+              url: post?.coverImage,
               width: 800,
               height: 600,
               alt: 'Og Image Alt',
@@ -115,7 +115,7 @@ const Blog = ({ post, morePosts }) => {
                 <div className='ml-4'>
                   <p className='font-bold sm:text-lg'>{post?.author?.name}</p>
                   <p className='text-gray-500 text-sm'>
-                    {moment.utc(post?.date).format('LL')}
+                    {moment.utc(date).format('LL')}
                   </p>
                 </div>
               </motion.div>
@@ -136,7 +136,7 @@ const Blog = ({ post, morePosts }) => {
                 initial={{ scale: 1.1 }}
                 animate={{ y: -20, transition: { delay: 0.2, ...transition } }}
                 className='w-full h-full object-cover'
-                src={image}
+                src={post?.coverImage}
                 alt={post?.title}
               />
             </motion.div>
@@ -173,9 +173,11 @@ const Blog = ({ post, morePosts }) => {
           </div>
 
           <div className='px-4 sm:px-64 mt-16 space-y-4'>
-            <div>
-              <p className='font-medium text-lg'>Comments</p>
-            </div>
+            {post?.comments.length > 0 && (
+              <div>
+                <p className='font-medium text-lg'>Comments</p>
+              </div>
+            )}
             {post?.comments?.map((item) => (
               <div
                 key={item?._id}
@@ -206,7 +208,7 @@ const Blog = ({ post, morePosts }) => {
 
             <div className='grid sm:grid-cols-3 gap-8 sm:gap-10'>
               {morePosts?.map((post) => (
-                <PostCard key={post._id} post={post} variant='home' />
+                <PostCard key={post?._id} post={post} variant='home' />
               ))}
             </div>
           </div>

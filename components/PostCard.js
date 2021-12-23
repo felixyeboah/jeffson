@@ -16,9 +16,11 @@ const PostCard = ({ post, variant }) => {
     }
   });
 
+  const date = new Date(post?.date);
+
   return (
     <div className='group relative' key={post._id}>
-      <Link href={`/blog/${post.slug}`} passHref className=' space-y-8'>
+      <Link href={`/blog/${post?.slug}`} passHref className=' space-y-8'>
         <a>
           <div
             className={clsx(
@@ -35,8 +37,8 @@ const PostCard = ({ post, variant }) => {
                 transition: { ...transition },
               }}
               className='h-full w-full object-cover rounded-lg'
-              src={post.coverImage}
-              alt={post.title}
+              src={post?.coverImage}
+              alt={post?.title}
             />
           </div>
           <motion.div
@@ -45,15 +47,15 @@ const PostCard = ({ post, variant }) => {
             className='space-y-2 sm:space-y-4 mt-10'
           >
             <p className='text-lg sm:text-xl font-medium text-gray-400'>
-              {moment(post.date).format('LL')}
+              {moment(date).format('LL')}
             </p>
-            <h2 className='font-medium text-2xl sm:text-4xl'>{post.title}</h2>
+            <h2 className='font-medium text-2xl sm:text-4xl'>{post?.title}</h2>
           </motion.div>
         </a>
       </Link>
 
       <ClipboardCopyButton
-        value={`${origin}/blog/${post.slug}`}
+        value={`${origin}/blog/${post?.slug}`}
         className='absolute z-10 left-6 top-6 transition duration-200 ease-in-expo'
       />
     </div>

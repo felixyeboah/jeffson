@@ -56,7 +56,7 @@ export function Form({ _id }) {
         />
       </label>
       <label className='block mb-5'>
-        <span className='text-gray-600'>Comment</span>
+        <span className='text-gray-600'>Message</span>
         <textarea
           {...register('comment', { required: true })}
           className='text-gray-300 bg-gray-700 border-2 border-gray-800 focus:border-gray-900 focus:outline-none mt-1 block w-full px-4 pt-2 rounded-lg placeholder:text-xl '
