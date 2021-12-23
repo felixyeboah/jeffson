@@ -4,7 +4,7 @@ import { HiMail } from 'react-icons/hi';
 
 const SocialLinks = () => {
   return (
-    <ul className='fixed left-12 bottom-0 flex items-center justify-center flex-col text-white sm:text-2xl hidden md:block'>
+    <ul className='fixed left-12 bottom-0 sm:flex items-center justify-center flex-col text-white sm:text-2xl hidden'>
       <a href='mailto:me@felixyeboah.dev' target='_blank' className='block'>
         <li className='mb-6'>
           <HiMail />

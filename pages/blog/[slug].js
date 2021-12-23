@@ -117,17 +117,23 @@ const Blog = ({ post, posts }) => {
             <Form _id={post?._id} />
           </div>
 
-          <div className='px-4 sm:px-64 mt-16'>
+          <div className='px-4 sm:px-64 mt-16 space-y-4'>
+            <div>
+              <p className='font-medium text-lg'>Comments</p>
+            </div>
             {post?.comments?.map((item) => (
-              <div key={item?._id} className='mb-6'>
+              <div
+                key={item?._id}
+                className='mb-6 bg-slate-700 p-6 rounded-lg text-white'
+              >
                 <div className='flex items-center'>
                   <div className='flex items-center justify-center sm:w-12 sm:h-12 rounded-full bg-blue-600 text-white font-bold text-xl'>
                     {getInitials(item?.name) || item?.name?.split(' ')[0][0]}
                   </div>
                   <div className='flex items-center'>
                     <h6 className='font-bold sm:text-xl ml-3'>{item?.name}</h6>
-                    <p className='ml-6 text-sm text-gray-500'>
-                      {moment(item?._createdAt).format('LL')}
+                    <p className='ml-6 text-sm text-gray-300'>
+                      {moment.utc(item?._createdAt).format('LL')}
                     </p>
                   </div>
                 </div>
@@ -137,7 +143,7 @@ const Blog = ({ post, posts }) => {
           </div>
         </div>
 
-        <div className='bg-gray-900 text-gray-200 pt-20 sm:pt-32 px-4 sm:px-80'>
+        <div className='bg-gray-900 text-gray-200 pt-20 sm:pt-32 px-4 sm:px-72'>
           <div>
             <h2 className='font-semibold mb-10 sm:mb-16 text-3xl sm:text-4xl'>
               More Posts

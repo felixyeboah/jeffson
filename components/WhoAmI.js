@@ -25,7 +25,7 @@ const WhoAmI = () => {
         I feel honored to have worked with extraordinary people, startups, and
         companies that helped to improve not only my skills but also my life.
       </p>
-      <div className='flex items-center flex-wrap mt-4 text-2xl block md:hidden'>
+      <div className='flex items-center flex-wrap mt-4 text-2xl md:hidden'>
         <a href='mailto:me@felixyeboah.dev' target='_blank'>
           <HiMail className='mr-6' />
         </a>

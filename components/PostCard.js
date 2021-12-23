@@ -54,7 +54,7 @@ const PostCard = ({ post, variant }) => {
 
       <ClipboardCopyButton
         value={`${origin}/blog/${post.slug}`}
-        className='absolute z-10 left-6 top-6'
+        className='absolute z-10 left-6 top-6 transition duration-200 ease-in-expo'
       />
     </div>
   );
