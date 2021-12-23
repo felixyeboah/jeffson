@@ -33,14 +33,22 @@ const Index = ({ allPosts }) => {
         }}
       />
       <div className='blog-background bg-blogBg'>
-        <div className='py-36 sm:py-40 sm:px-40 min-h-screen '>
-          <div className='text-center border-b border-black w-4/5 overflow-hidden mx-auto'>
-            <h2 className='font-black text-6xl sm:text-12xl uppercase'>
-              The Blog
-            </h2>
+        <div className='py-40 sm:py-24 sm:px-40 min-h-screen '>
+          <div className='sm:flex items-center justify-between sm:w-4/5 mx-auto px-6 sm:px-0'>
+            <div className='sm:w-2/5 space-y-4'>
+              <h4 className='text-3xl sm:text-5xl font-medium text-gray-800'>
+                Find the latest of my writing here.
+              </h4>
+              <p className='text-md sm:text-xl font-semibold text-slate-600'>
+                I write about travel, life and everything tech.
+              </p>
+            </div>
+            <div className='sm:w-3/5'>
+              <img className='sm:h-102 w-full' src='/user.png' alt='user' />
+            </div>
           </div>
 
-          <div className='pt-14 sm:pt-20 px-4 sm:px-32'>
+          <div className='pt-36 sm:pt-48 px-4 sm:px-32'>
             {allPosts.slice(0, 1).map((post) => (
               <FeaturedBlogCard key={post._id} post={post} />
             ))}

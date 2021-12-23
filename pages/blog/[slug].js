@@ -17,7 +17,7 @@ import { BsArrowLeft } from 'react-icons/bs';
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
-const Blog = ({ post, posts, morePosts }) => {
+const Blog = ({ post, morePosts }) => {
   const [canScroll, setCanScroll] = React.useState(false);
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
@@ -73,7 +73,13 @@ const Blog = ({ post, posts, morePosts }) => {
         }}
       />
 
-      <div className='bg-blogBg'>
+      <motion.div
+        initial='initial'
+        animate='animate'
+        exit='exit'
+        onAnimationComplete={() => setCanScroll(true)}
+        className='bg-blogBg'
+      >
         <div className='pt-40 sm:pt-56 pb-32 sm:pb-40 px-4 sm:px-72 min-h-screen'>
           <Link href='/blog' passHref>
             <a>
@@ -84,11 +90,21 @@ const Blog = ({ post, posts, morePosts }) => {
             </a>
           </Link>
           <div className='space-y-10'>
-            <div>
-              <h2 className='text-5xl sm:text-7xl font-bold leading-10 font-blog'>
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 1.2, ...transition },
+              }}
+            >
+              <h2 className='text-5xl sm:text-7xl font-bold sm:leading-2 font-blog'>
                 {post?.title}
               </h2>
-              <div className='flex items-center mt-6'>
+              <motion.div
+                animate={{ transition: { delay: 1.3, ...transition } }}
+                className='flex items-center mt-6'
+              >
                 <div className='flex items-center justify-center w-16 h-16 bg-gradient-to-tr from-purple-500 via-red-500 to-pink-500 rounded-full'>
                   <img
                     className='rounded-full w-14 h-14 object-cover border'
@@ -102,8 +118,8 @@ const Blog = ({ post, posts, morePosts }) => {
                     {moment.utc(post?.date).format('LL')}
                   </p>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             <motion.div
               initial={{ x: '50%', width: '383px', height: '35rem' }}
@@ -202,7 +218,7 @@ const Blog = ({ post, posts, morePosts }) => {
             </p>
           </footer>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
