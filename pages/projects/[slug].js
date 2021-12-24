@@ -15,6 +15,7 @@ const Portfolio = ({ project, moreProjects }) => {
   const url1 = moreProjects ? moreProjects[0]?.slug : null;
   const title2 = moreProjects ? moreProjects[1]?.title : null;
   const url2 = moreProjects ? moreProjects[1]?.slug : null;
+
   return (
     <>
       <NextSeo

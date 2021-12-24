@@ -1,4 +1,4 @@
-import { ArrowLink } from '@components/ArrowButton';
+// import { ArrowLink } from '@components/ArrowButton';
 import moment from 'moment';
 import React from 'react';
 
@@ -9,12 +9,12 @@ const ProjectHeader = ({ project }) => {
         <h3 className='font-extrabold text-4xl sm:text-7xl'>
           {project?.title}
         </h3>
-        <div className='sm:w-48 flex items-center justify-between mt-4 sm:mt-0 relative'>
-          <ArrowLink href={project?.url}>
-            <p>visit url</p>
-            <div className='focus-ring absolute z-10 inset-0 left-0 right-0 rounded-lg md:-left-12 md:-right-12 lg:left-0 lg:right-0' />
-          </ArrowLink>
-        </div>
+        {/*<div className='sm:w-48 flex items-center justify-between mt-4 sm:mt-0 relative'>*/}
+        {/*  <ArrowLink href={project?.url}>*/}
+        {/*    <p>visit url</p>*/}
+        {/*    <div className='focus-ring absolute z-10 inset-0 left-0 right-0 rounded-lg md:-left-12 md:-right-12 lg:left-0 lg:right-0' />*/}
+        {/*  </ArrowLink>*/}
+        {/*</div>*/}
       </div>
       <div className='sm:w-[35rem] grid sm:grid-cols-2 gap-10 sm:gap-20 mt-16 sm:mt-0'>
         <div className='sm:w-80 space-y-4'>
