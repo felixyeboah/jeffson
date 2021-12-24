@@ -45,8 +45,8 @@ const Portfolio = ({ project, moreProjects }) => {
             height='100%'
             layout='responsive'
             className='w-full h-full object-scale-down object-left-top'
-            src={project.coverImage}
-            alt={project.title}
+            src={project?.coverImage}
+            alt={project?.title}
           />
         </div>
 
