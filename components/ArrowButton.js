@@ -174,13 +174,16 @@ function ArrowLink({ to, href, ...props }) {
   } else if (to) {
     return (
       <MotionLink
-        to={to}
+        href={to}
         {...getBaseProps(props)}
         ref={ref}
         animate={state}
+        passHref
         transition={shouldReduceMotion ? { duration: 0 } : {}}
       >
-        <ArrowButtonContent {...props} />
+        <a>
+          <ArrowButtonContent {...props} />
+        </a>
       </MotionLink>
     );
   }
