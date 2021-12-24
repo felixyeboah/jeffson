@@ -52,7 +52,7 @@ const Projects = ({ allProjects }) => {
             <div className='space-y-2'>
               <h3 className='font-bold text-4xl sm:text-6xl'>Projects</h3>
               <p className='font-medium sm:text-xl text-gray-400'>
-                Lorem ipsum dolor sit amet.
+                All the projects I worked on or assisted in a way.
               </p>
             </div>
             <div className='flex items-center space-x-3 sm:space-x-6'>
