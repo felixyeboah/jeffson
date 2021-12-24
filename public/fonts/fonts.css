@@ -117,3 +117,59 @@
   font-weight: 700;
   src: url('./Larsseit-Bold.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'CerebriSans';
+  src: url(./CerebriSans-Book.woff) format('woff'),
+    url(./CerebriSans-Book.woff2) format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CerebriSans';
+  src: url(./CerebriSans-Regular.woff) format('woff'),
+    url(./CerebriSans-Regular.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CerebriSans';
+  src: url(./CerebriSans-Medium.woff) format('woff'),
+    url(./CerebriSans-Medium.woff2) format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CerebriSans';
+  src: url(./CerebriSans-SemiBold.woff) format('woff'),
+    url(./CerebriSans-SemiBold.woff2) format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CerebriSans';
+  src: url(./CerebriSans-Bold.woff) format('woff'),
+    url(./CerebriSans-Bold.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CerebriSans';
+  src: url(./CerebriSans-ExtraBold.woff) format('woff'),
+    url(./CerebriSans-ExtraBold.woff2) format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CerebriSans';
+  src: url(./CerebriSans-Heavy.woff) format('woff'),
+    url(./CerebriSans-Heavy.woff2) format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}

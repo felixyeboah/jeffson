@@ -13,6 +13,7 @@ module.exports = {
         serif: ['Playfair Display', ...defaultTheme.fontFamily.serif],
         uses: ['OperatorMono', ...defaultTheme.fontFamily.serif],
         blog: ['Larsseit', ...defaultTheme.fontFamily.sans],
+        project: ['CerebriSans', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         fuchsia: colors.fuchsia,

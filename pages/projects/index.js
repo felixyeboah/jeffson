@@ -1,6 +1,6 @@
 import React from 'react';
 import BlockContent from '@sanity/block-content-to-react';
-import { getAllPostsForProjects } from '../lib/api';
+import { getAllPostsForProjects } from '../../lib/api';
 import { NextSeo } from 'next-seo';
 import { ArrowButton, ArrowLink } from '@components/ArrowButton';
 import { motion } from 'framer-motion';
@@ -94,7 +94,7 @@ const Projects = ({ allProjects }) => {
                   </div>
 
                   <div className='flex items-center justify-between mt-4 sm:mt-0 relative'>
-                    <ArrowLink href={`/project/${project.slug}`}>
+                    <ArrowLink href={`/projects/${project.slug}`}>
                       <p>learn more</p>
                       <div className='focus-ring absolute z-10 inset-0 left-0 right-0 rounded-lg md:-left-12 md:-right-12 lg:left-0 lg:right-0' />
                     </ArrowLink>
