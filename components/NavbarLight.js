@@ -31,7 +31,7 @@ const NavbarLight = ({ onOpen }) => {
         <img src='/humberger.svg' alt='Humberger' />
       </button>
 
-      <ul className='flex items-center uppercase text-sm text-gray-600 hidden sm:flex'>
+      <ul className='flex items-center uppercase text-sm text-gray-600 sm:flex'>
         <ActiveLink href='/' passHref activeClassName='active-class'>
           <a className='hover:text-gray-800'>
             <li className='sm:px-6 font-medium'>Home</li>
@@ -65,7 +65,7 @@ const NavbarLight = ({ onOpen }) => {
       </ul>
 
       <a
-        className='hidden sm:flex items-center space-x-3'
+        className='hidden sm:flex items-center space-x-3 text-gray-600 '
         href='mailto:me@felixyeboah.dev?subject=Contacting you about a project!"'
       >
         <HiMail className='mr-2' />
