@@ -43,7 +43,7 @@ const Uses = ({ allUses }) => {
             </div>
 
             <div className='mt-4'>
-              <p className='sm:text-xl leading-5 sm:leading-4'>
+              <p className='sm:text-xl leading-5 sm:leading-2'>
                 I don't get asked about my work environment so often, but just
                 in case if you want to know, here are the tools, devices and
                 services I use to get things done. These are not the best ones,

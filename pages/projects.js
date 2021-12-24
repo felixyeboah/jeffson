@@ -1,69 +1,121 @@
-import React from "react";
-import Project from "@components/Project";
-import { getAllPostsForProjects } from "../lib/api";
-import { NextSeo } from "next-seo";
-import ProjectCard from "@components/projectCard";
+import React from 'react';
+import BlockContent from '@sanity/block-content-to-react';
+import { getAllPostsForProjects } from '../lib/api';
+import { NextSeo } from 'next-seo';
+import { ArrowButton, ArrowLink } from '@components/ArrowButton';
+import { motion } from 'framer-motion';
+import useDeviceDetect from 'hooks/useDeviceDetect';
+import Image from 'next/image';
+
+export const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
 const Projects = ({ allProjects }) => {
-  const data = {
-    date: "October 01, 2021",
-    title: "Culture Curations",
-    description:
-      "Culture Management Group LLC is an experiential production company that prioritizes celebration of Africa’s diverse culture and the vibrant work of African creatives & entrepreneurs.",
-    image: "/images/curatedbyculture.jpg",
-    technologies: [
-      "React",
-      "Next",
-      "Express",
-      "Chakra UI",
-      "Axios",
-      "React Query",
-      "React Slick",
-    ],
-    fonts: ["Poppins"],
-    backgroundcolor: "curated",
-    datecolor: "gray-400",
-    headingcolor: "white",
-    contentcolor: "gray-300",
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+
+  const { isMobile } = useDeviceDetect();
+
+  const handleClick = (direction) => {
+    setCurrentSlide((prevState) => {
+      return (allProjects.length + prevState + direction) % allProjects.length;
+    });
   };
+
   return (
     <>
       <NextSeo
-        title="Projects | Felix Yeboah"
-        description="List of all my projects."
-        canonical="https://www.canonical.ie/"
+        title='Projects | Felix Yeboah'
+        description='List of all my projects.'
+        canonical='https://www.canonical.ie/'
         openGraph={{
-          url: "https://jeffson.dev/projects",
-          title: "Projects | Felix Yeboah",
-          description: "List of all my projects.",
+          url: 'https://jeffson.dev/projects',
+          title: 'Projects | Felix Yeboah',
+          description: 'List of all my projects.',
           images: [
             {
-              url: "https://i.imgur.com/JiEadoT.png",
+              url: 'https://i.imgur.com/JiEadoT.png',
               width: 800,
               height: 600,
-              alt: "Og Image Alt",
+              alt: 'Og Image Alt',
             },
           ],
-          site_name: "jeffson.dev",
+          site_name: 'jeffson.dev',
         }}
         twitter={{
-          handle: "@jaeyholic",
-          site: "@site",
-          cardType: "summary_large_image",
+          handle: '@jaeyholic',
+          site: '@site',
+          cardType: 'summary_large_image',
         }}
       />
-      <div className="">
-        <ProjectCard project={data} />
-        {allProjects.map((project) => (
-          <Project key={project._id} project={project} />
-        ))}
+      <div className='bg-slate-700 h-screen text-gray-100 overflow-hidden'>
+        <div className='px-6 sm:px-20 pt-28'>
+          <div className='flex items-center justify-between mb-10'>
+            <div className='space-y-2'>
+              <h3 className='font-bold text-4xl sm:text-6xl'>Projects</h3>
+              <p className='font-medium sm:text-xl text-gray-400'>
+                Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+            <div className='flex items-center space-x-3 sm:space-x-6'>
+              <div>
+                <ArrowButton direction='left' onClick={() => handleClick(-1)} />
+              </div>
+              <div>
+                <ArrowButton
+                  direction='right'
+                  onClick={() => handleClick(+1)}
+                />
+              </div>
+            </div>
+          </div>
+          <motion.div
+            animate={{
+              x: `-${isMobile ? 24 * currentSlide : 72 * currentSlide}rem`,
+              transition: { ...transition },
+            }}
+            className='flex items-start justify-between'
+          >
+            {allProjects.map((project) => (
+              <div
+                key={project._id}
+                className='min-w-[24rem] sm:min-w-[70rem] sm:mr-10'
+              >
+                <div className='block sm:flex items-start justify-between h-[10rem] sm:h-[4rem]'>
+                  <div className='w-[22.5rem] sm:w-[50rem] sm:space-y-4'>
+                    <h3 className='font-bold text-2xl sm:text-4xl'>
+                      {project.title}
+                    </h3>
+                    <p className='font-medium sm:text-xl line-clamp-2'>
+                      <BlockContent
+                        blocks={project?.body}
+                        projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
+                        dataset='production'
+                      />
+                    </p>
+                  </div>
+
+                  <div className='flex items-center justify-between mt-4 sm:mt-0 relative'>
+                    <ArrowLink href={`/project/${project.slug}`}>
+                      <p>learn more</p>
+                      <div className='focus-ring absolute z-10 inset-0 left-0 right-0 rounded-lg md:-left-12 md:-right-12 lg:left-0 lg:right-0' />
+                    </ArrowLink>
+                  </div>
+                </div>
+
+                <div className='block w-[21rem] sm:w-[1120px] h-[500px] sm:h-[640px] overflow-hidden mt-14 sm:mt-20'>
+                  <Image
+                    width='100%'
+                    height='100%'
+                    layout='responsive'
+                    className='w-full h-full object-scale-down object-left-top'
+                    src={project.coverImage}
+                    alt={project.title}
+                  />
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
-      <footer className="w-full pt-6 sm:pt-28 pb-5 sm:pb-10 px-4 sm:px-72">
-        <p className="flex items-center">
-          &copy; {new Date().getFullYear()}. Felix Yeboah{" "}
-          <span className="text-3xl px-2">&middot;</span> All rights reserved.
-        </p>
-      </footer>
     </>
   );
 };

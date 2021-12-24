@@ -7,7 +7,7 @@ const InspirationsSection = ({ allInspirations }) => {
       <div className='mb-16'>
         <h4 className='text-4xl'>Inspirational Channels and People</h4>
       </div>
-      <div className='grid grid-cols-2 sm:grid-cols-8 gap-6 px-8 sm:px-0 text-center'>
+      <div className='flex items-center overflow-x-scroll text-center'>
         {allInspirations.map((item) => (
           <ProfileAvatar key={item._id} item={item} />
         ))}

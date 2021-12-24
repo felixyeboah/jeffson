@@ -3,36 +3,36 @@
 @tailwind utilities;
 
 .home-background {
-    background-image: url("/homebg.svg");
-    background-repeat: no-repeat;
-    /*background-size: cover;*/
+  background-image: url('/homebg.svg');
+  background-repeat: no-repeat;
+  /*background-size: cover;*/
 }
 
 .bookmark-background {
-    background-image: url("/images/gradient.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
+  background-image: url('/images/gradient.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .blog-background {
-    background-image: url("/blogBg.svg");
-    background-repeat: no-repeat;
-    /*background-size: cover;*/
+  background-image: url('/blogBg.svg');
+  background-repeat: no-repeat;
+  /*background-size: cover;*/
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .active {
-    color: white !important;
+  color: white !important;
 }
 
 .active-class {
-    @apply text-bgBlack font-black;
+  @apply text-bgBlack font-black;
 }
 
 .active-link {
-    @apply text-white font-black;
+  @apply text-white font-black;
 }
