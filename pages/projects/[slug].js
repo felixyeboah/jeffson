@@ -11,6 +11,10 @@ import React from 'react';
 import Link from 'next/link';
 
 const Portfolio = ({ project, moreProjects }) => {
+  const title1 = moreProjects ? moreProjects[0]?.title : null;
+  const url1 = moreProjects ? moreProjects[0]?.slug : null;
+  const title2 = moreProjects ? moreProjects[1]?.title : null;
+  const url2 = moreProjects ? moreProjects[1]?.slug : null;
   return (
     <>
       <NextSeo
@@ -61,17 +65,17 @@ const Portfolio = ({ project, moreProjects }) => {
         <div className='flex items-start justify-between my-20 sm:my-32 sm:px-32'>
           <div className='w-1/2 sm:w-[33rem] space-y-6 mr-3 sm:mr-0'>
             <p className='sm:text-xl text-gray-500'>Previous Project</p>
-            <Link href={`/projects/${moreProjects[0]?.slug}`} passHref>
+            <Link href={`/projects/${url1}`} passHref>
               <a className='text-lg sm:text-6xl font-extrabold hover:text-orange-500 transition-all duration-700 ease-out-expo'>
-                {moreProjects[0]?.title}
+                {title1}
               </a>
             </Link>
           </div>
           <div className='w-1/2 sm:w-[33rem] space-y-6'>
             <p className='sm:text-xl text-gray-500'>Next Project</p>
-            <Link href={`/projects/${moreProjects[1]?.slug}`} passHref>
+            <Link href={`/projects/${url2}`} passHref>
               <a className='text-lg sm:text-6xl font-extrabold hover:text-orange-500 transition-all duration-700 ease-out-expo'>
-                {moreProjects[1]?.title}
+                {title2}
               </a>
             </Link>
           </div>
