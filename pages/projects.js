@@ -46,7 +46,7 @@ const Projects = ({ allProjects }) => {
           cardType: 'summary_large_image',
         }}
       />
-      <div className='bg-slate-700 h-screen text-gray-100 overflow-hidden'>
+      <div className='bg-slate-700 min-h-screen text-gray-100 overflow-hidden'>
         <div className='px-6 sm:px-20 pt-28'>
           <div className='flex items-center justify-between mb-10'>
             <div className='space-y-2'>
@@ -55,7 +55,7 @@ const Projects = ({ allProjects }) => {
                 All the projects I worked on or assisted in a way.
               </p>
             </div>
-            <div className='flex items-center space-x-3 sm:space-x-6'>
+            <div className='hidden sm:flex items-center space-x-3 sm:space-x-6'>
               <div>
                 <ArrowButton direction='left' onClick={() => handleClick(-1)} />
               </div>
@@ -72,7 +72,7 @@ const Projects = ({ allProjects }) => {
               x: `-${isMobile ? 24 * currentSlide : 72 * currentSlide}rem`,
               transition: { ...transition },
             }}
-            className='flex items-start justify-between'
+            className='block sm:flex items-start sm:justify-between space-y-6 sm:space-y-0'
           >
             {allProjects.map((project) => (
               <div
@@ -101,7 +101,7 @@ const Projects = ({ allProjects }) => {
                   </div>
                 </div>
 
-                <div className='block w-[21rem] sm:w-[1120px] h-[500px] sm:h-[640px] overflow-hidden mt-14 sm:mt-20'>
+                <div className='block w-[21rem] sm:w-[1120px] sm:h-[640px] overflow-hidden mt-14 sm:mt-20'>
                   <Image
                     width='100%'
                     height='100%'
