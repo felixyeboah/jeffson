@@ -2,7 +2,6 @@ import React from 'react';
 import { getAllPostsForHome } from '../../lib/api';
 import FeaturedBlogCard from '@components/FeaturedBlogCard';
 import { NextSeo } from 'next-seo';
-import BlogCard from '@components/BlogCard';
 import PostCard from '@components/PostCard';
 
 const Index = ({ allPosts }) => {

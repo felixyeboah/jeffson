@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import ActiveLink from '@components/ActiveLink';
+import { HiMail } from 'react-icons/hi';
 
 const NavbarLight = ({ onOpen }) => {
   const { pathname } = useRouter();
