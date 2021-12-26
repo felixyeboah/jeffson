@@ -83,7 +83,7 @@ const Blog = ({ post, morePosts }) => {
         <div className='pt-40 sm:pt-56 pb-32 sm:pb-40 px-4 sm:px-72 min-h-screen'>
           <Link href='/blog' passHref>
             <a>
-              <div className='flex items-center font-medium space-x-2 sm:mb-24 sm:text-xl'>
+              <div className='flex items-center font-medium space-x-2 mb-14 sm:mb-24 sm:text-xl'>
                 <BsArrowLeft />
                 <p>Back to overview</p>
               </div>
