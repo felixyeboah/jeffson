@@ -57,8 +57,7 @@ function MyApp({ Component, pageProps }) {
       <div className='antialiased font-project relative'>
         {pathname === '/blog' ||
         pathname === '/books' ||
-        pathname === '/blog/[slug]' ||
-        pathname === '/projects/[slug]' ? (
+        pathname === '/blog/[slug]' ? (
           <NavbarLight onOpen={onOpen} />
         ) : (
           <Navbar onOpen={onOpen} />
