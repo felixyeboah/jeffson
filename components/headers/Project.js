@@ -1,9 +1,9 @@
 import moment from 'moment';
 import React from 'react';
-import {ArrowLink} from "@components/ArrowButton";
+import { ArrowLink } from '@components/ArrowButton';
 
 const ProjectHeader = ({ project }) => {
-  const url = project ? project?.url : "/"
+  const url = project ? project?.url : '/';
   return (
     <div className='block sm:flex items-start justify-between'>
       <div className='sm:w-[45rem] sm:space-y-20'>
@@ -19,17 +19,17 @@ const ProjectHeader = ({ project }) => {
       </div>
       <div className='sm:w-[35rem] grid sm:grid-cols-2 gap-10 sm:gap-20 mt-16 sm:mt-0'>
         <div className='sm:w-80 space-y-4'>
-          <p className='uppercase text-gray-500 text-sm sm:text-lg'>Client</p>
+          <p className='uppercase text-gray-400 text-sm sm:text-lg'>Client</p>
           <p className='text-lg sm:text-xl'>{project?.client}</p>
         </div>
         <div className='sm:w-80 space-y-4'>
-          <p className='uppercase text-gray-500 text-sm sm:text-lg'>Date</p>
+          <p className='uppercase text-gray-400 text-sm sm:text-lg'>Date</p>
           <p className='text-lg sm:text-xl'>
             {moment.utc(project?.date).format('LL')}
           </p>
         </div>
         <div className='sm:w-70 space-y-4'>
-          <p className='uppercase text-gray-500 text-sm sm:text-lg'>Fonts</p>
+          <p className='uppercase text-gray-400 text-sm sm:text-lg'>Fonts</p>
           <ul className='flex flex-wrap'>
             {project?.fonts?.map((font) => (
               <li key={font} className='text-lg sm:text-xl'>
@@ -39,7 +39,7 @@ const ProjectHeader = ({ project }) => {
           </ul>
         </div>
         <div className='sm:w-70 space-y-4'>
-          <p className='uppercase text-gray-500 text-sm sm:text-lg'>
+          <p className='uppercase text-gray-400 text-sm sm:text-lg'>
             Technologies
           </p>
           <ul className='flex flex-wrap'>

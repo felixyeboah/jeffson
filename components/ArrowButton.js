@@ -181,7 +181,7 @@ function ArrowLink({ to, href, ...props }) {
         passHref
         transition={shouldReduceMotion ? { duration: 0 } : {}}
       >
-        <a>
+        <a className='flex items-center'>
           <ArrowButtonContent {...props} />
         </a>
       </MotionLink>

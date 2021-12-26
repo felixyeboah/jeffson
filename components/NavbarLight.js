@@ -31,7 +31,7 @@ const NavbarLight = ({ onOpen }) => {
         <img src='/humberger.svg' alt='Humberger' />
       </button>
 
-      <ul className='flex items-center uppercase text-sm text-gray-600 sm:flex'>
+      <ul className='hidden items-center uppercase text-sm text-gray-600 sm:flex'>
         <ActiveLink href='/' passHref activeClassName='active-class'>
           <a className='hover:text-gray-800'>
             <li className='sm:px-6 font-medium'>Home</li>

@@ -42,7 +42,7 @@ const Portfolio = ({ project, moreProjects }) => {
           cardType: 'summary_large_image',
         }}
       />
-      <div className='pt-40 sm:pt-64 px-5 sm:px-32 overflow-hidden'>
+      <div className='bg-slate-800 text-gray-100 pt-40 sm:pt-64 px-5 sm:px-32 overflow-hidden'>
         <ProjectHeader project={project} />
         <div className='block w-[21rem] sm:w-[1500px] h-[200px] sm:h-[850px] overflow-hidden mt-16 sm:mt-28'>
           <Image
@@ -65,7 +65,7 @@ const Portfolio = ({ project, moreProjects }) => {
 
         <div className='flex items-start justify-between my-20 sm:my-32 sm:px-32'>
           <div className='w-1/2 sm:w-[33rem] space-y-6 mr-3 sm:mr-0'>
-            <p className='sm:text-xl text-gray-500'>Previous Project</p>
+            <p className='sm:text-xl text-gray-400'>Previous Project</p>
             <Link href={`/projects/${url1}`} passHref>
               <a className='text-lg sm:text-6xl font-extrabold hover:text-orange-500 transition-all duration-700 ease-out-expo'>
                 {title1}
@@ -73,7 +73,7 @@ const Portfolio = ({ project, moreProjects }) => {
             </Link>
           </div>
           <div className='w-1/2 sm:w-[33rem] space-y-6'>
-            <p className='sm:text-xl text-gray-500'>Next Project</p>
+            <p className='sm:text-xl text-gray-400'>Next Project</p>
             <Link href={`/projects/${url2}`} passHref>
               <a className='text-lg sm:text-6xl font-extrabold hover:text-orange-500 transition-all duration-700 ease-out-expo'>
                 {title2}
