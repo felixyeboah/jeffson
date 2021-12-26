@@ -122,7 +122,11 @@ const Blog = ({ post, morePosts }) => {
             </motion.div>
 
             <motion.div
-              initial={{ x: '50%', width: '383px', height: '35rem' }}
+              initial={{
+                x: '50%',
+                width: '383px',
+                height: '35rem',
+              }}
               animate={{
                 x: 0,
                 width: '100%',
@@ -134,7 +138,10 @@ const Blog = ({ post, morePosts }) => {
               <motion.img
                 style={{ scale: scale, opacity: opacity }}
                 initial={{ scale: 1.1 }}
-                animate={{ y: -20, transition: { delay: 0.2, ...transition } }}
+                animate={{
+                  y: -20,
+                  transition: { delay: 0.2, ...transition },
+                }}
                 className='w-full h-full object-cover'
                 src={post?.coverImage}
                 alt={post?.title}
