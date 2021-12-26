@@ -5,7 +5,6 @@ import { AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 import NavbarLight from '@components/NavbarLight';
 import MobileMenu from '@components/MobileMenu';
-import { init } from 'lib/ga';
 import { Provider } from '@lyket/react';
 import SocialLinks from '@components/SocialLinks';
 import ScrollToTop from '@components/ScrollToTop';
@@ -39,9 +38,6 @@ function MyApp({ Component, pageProps }) {
     window.addEventListener('scroll', checkScrollTop);
   }, []);
 
-  React.useEffect(() => {
-    init(process.env.NEXT_PUBLIC_G);
-  }, []);
 
   return (
     <Provider

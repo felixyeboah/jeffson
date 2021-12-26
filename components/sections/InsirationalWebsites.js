@@ -1,5 +1,5 @@
 import React from 'react';
-import WebsiteCard from './WebsiteCard';
+import WebsiteCard from 'components/WebsiteCard';
 
 const InsirationalWebsites = ({ allWebsites }) => {
   return (

@@ -17,7 +17,6 @@
     "babel-plugin-module-resolver": "^4.1.0",
     "clsx": "^1.1.1",
     "framer-motion": "^5.5.5",
-    "ga-4-react": "^0.1.281",
     "moment": "^2.29.1",
     "next": "12.0.7",
     "next-seo": "^4.28.1",
@@ -25,7 +24,6 @@
     "react-dom": "17.0.2",
     "react-hook-form": "^7.22.5",
     "react-icons": "^4.3.1",
-    "react-rough-notation": "^1.0.1",
     "react-scroll": "^1.8.4",
     "sanity-plugin-iframe-pane": "^1.0.15"
   },

@@ -59,7 +59,7 @@ const FeaturedBlogCard = ({ post }) => {
 
       <ClipboardCopyButton
         value={`${origin}/blog/${post.slug}`}
-        className='absolute z-10 right-4 sm:right-[11rem] top-6 sm:top-24 transition duration-200 ease-in-expo'
+        className='absolute z-10 right-4 sm:left-[52rem] top-6 sm:top-24 transition duration-200 ease-in-expo'
       />
     </div>
   );

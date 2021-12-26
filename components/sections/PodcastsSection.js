@@ -1,5 +1,5 @@
 import React from 'react';
-import PodcastCard from './PodcastCard';
+import PodcastCard from 'components/PodcastCard';
 
 const PodcastsSection = ({ allPodcasts }) => {
   return (

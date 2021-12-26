@@ -1,5 +1,5 @@
 import React from 'react';
-import ProfileAvatar from './ProfileAvatar';
+import ProfileAvatar from 'components/ProfileAvatar';
 
 const InspirationsSection = ({ allInspirations }) => {
   return (

@@ -36,12 +36,13 @@ export default function Home({ allPosts, allProjects }) {
       />
       <div className='bg-bgBlack min-h-screen text-gray-100 home-background pt-40 sm:pt-56'>
         <header className='sm:text-9xl font-bold tracking-tighter px-10 sm:px-80 hidden sm:block'>
-          <h1>A Software Developer &amp;</h1>
-          <h1>Design Minded</h1>
+          <h1>A Design</h1>
+          <h1>Oriented Software</h1>
+          <h1>Developer</h1>
         </header>
 
         <header className='text-6xl font-bold tracking-tighter px-10 sm:px-80 block sm:hidden'>
-          <h1>A Software Developer &amp; Design Minded</h1>
+          <h1>A Design Oriented Software Developer</h1>
         </header>
 
         <main className='sm:px-72 py-20 sm:py-24'>

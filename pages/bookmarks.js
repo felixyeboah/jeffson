@@ -9,11 +9,11 @@ import {
 import SubNav from '@components/SubNav';
 import useSticky from 'hooks/useSticky';
 import { NextSeo } from 'next-seo';
-import BookmarkSection from '@components/BookmarkSection';
-import InspirationsSection from '@components/InspirationsSection';
-import InsirationalWebsites from '@components/InsirationalWebsites';
-import AllVideosSection from '@components/AllVideosSection';
-import PodcastsSection from '@components/PodcastsSection';
+import BookmarkSection from '@components/sections/BookmarkSection';
+import InspirationsSection from '@components/sections/InspirationsSection';
+import InsirationalWebsites from '@components/sections/InsirationalWebsites';
+import AllVideosSection from '@components/sections/AllVideosSection';
+import PodcastsSection from '@components/sections/PodcastsSection';
 
 const Bookmarks = ({
   allBookmarks,

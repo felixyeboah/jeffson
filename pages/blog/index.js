@@ -33,17 +33,21 @@ const Index = ({ allPosts }) => {
       />
       <div className='blog-background bg-blogBg'>
         <div className='py-40 sm:py-24 sm:px-40 min-h-screen '>
-          <div className='sm:flex items-center justify-between sm:w-4/5 mx-auto px-6 sm:px-0'>
-            <div className='sm:w-2/5 space-y-4'>
-              <h4 className='text-3xl sm:text-5xl font-medium text-gray-800'>
+          <div className='sm:flex items-center justify-center mx-auto px-6 sm:px-0 sm:pt-28'>
+            <div className='sm:w-2/5 space-y-4 text-center'>
+              <h4 className='text-3xl sm:text-6xl font-extrabold text-gray-800'>
                 Find the latest of my writing here.
               </h4>
               <p className='text-md sm:text-xl font-semibold text-slate-600'>
                 I write about travel, life and everything tech.
               </p>
-            </div>
-            <div className='sm:w-3/5'>
-              <img className='sm:h-102 w-full' src='/user.png' alt='user' />
+              <div className='sm:pt-10'>
+                <input
+                  type='text'
+                  className='px-6 h-16 rounded-full w-full font-medium bg-slate-500 placeholder:text-gray-100 focus:outline-none focus:outline-gray-500 placeholder:text-lg text-gray-100'
+                  placeholder='search for an article'
+                />
+              </div>
             </div>
           </div>
 
