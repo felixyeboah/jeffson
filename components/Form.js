@@ -69,7 +69,7 @@ export function Form({ _id }) {
       <input
         type='submit'
         value='Submit comment'
-        className='shadow bg-gray-700 hover:bg-gray-800 focus:shadow-outline focus:outline-none text-white sm:h-14 sm:px-10 rounded cursor-pointer sm:text-lg font-bold'
+        className='shadow bg-gray-700 hover:bg-gray-800 focus:shadow-outline focus:outline-none text-white h-10 sm:h-14 px-6 sm:px-10 rounded cursor-pointer sm:text-lg font-bold'
       />
     </form>
   );
