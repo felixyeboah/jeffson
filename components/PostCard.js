@@ -49,7 +49,9 @@ const PostCard = ({ post, variant }) => {
             <p className='text-lg sm:text-xl font-medium text-gray-400'>
               {moment(date).format('LL')}
             </p>
-            <h2 className='font-medium text-2xl sm:text-4xl'>{post?.title}</h2>
+            <h2 className='font-medium text-2xl sm:text-4xl line-clamp-2'>
+              {post?.title}
+            </h2>
           </motion.div>
         </a>
       </Link>
