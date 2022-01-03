@@ -101,24 +101,9 @@ const Blog = ({ post, morePosts }) => {
               <h2 className='text-5xl sm:text-7xl font-bold sm:leading-2 font-blog'>
                 {post?.title}
               </h2>
-              <motion.div
-                animate={{ transition: { delay: 1.3, ...transition } }}
-                className='flex items-center mt-6'
-              >
-                <div className='flex items-center justify-center w-16 h-16 bg-gradient-to-tr from-purple-500 via-red-500 to-pink-500 rounded-full'>
-                  <img
-                    className='rounded-full w-14 h-14 object-cover border'
-                    src={post?.author?.avatar}
-                    alt={post?.author?.name}
-                  />
-                </div>
-                <div className='ml-4'>
-                  <p className='font-bold sm:text-lg'>{post?.author?.name}</p>
-                  <p className='text-gray-500 text-sm'>
-                    {moment.utc(date).format('LL')}
-                  </p>
-                </div>
-              </motion.div>
+              <p className='text-gray-500 text-md mt-4'>
+                {moment.utc(date).format('LL')}
+              </p>
             </motion.div>
 
             <motion.div
@@ -204,6 +189,39 @@ const Blog = ({ post, morePosts }) => {
                 <p className='mt-2'>{item?.comment}</p>
               </div>
             ))}
+          </div>
+
+          <div className='px-4 sm:px-64 mt-32 border-t border-gray-300 pt-14 sm:pt-20'>
+            <div className='grid sm:grid-cols-6 sm:gap-8'>
+              <div className='sm:col-span-1'>
+                <motion.div
+                  animate={{ transition: { delay: 1.3, ...transition } }}
+                  className='flex items-center'
+                >
+                  <div className='flex items-center justify-center w-16 h-16 bg-gradient-to-tr from-purple-500 via-red-500 to-pink-500 rounded-full'>
+                    <img
+                      className='rounded-full w-14 h-14 object-cover border'
+                      src={post?.author?.avatar}
+                      alt={post?.author?.name}
+                    />
+                  </div>
+                </motion.div>
+              </div>
+              <div className='sm:col-span-5 mt-4 sm:mt-0'>
+                <div>
+                  <p className='font-bold sm:text-lg'>
+                    Written by {post?.author?.name}
+                  </p>
+                </div>
+                <div className='prose prose-md sm:prose-lg'>
+                  <BlockContent
+                    blocks={post?.author?.body}
+                    projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
+                    dataset='production'
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

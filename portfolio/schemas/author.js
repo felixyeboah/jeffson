@@ -16,5 +16,24 @@ export default {
         hotspot: true,
       },
     },
+    {
+      name: 'body',
+      title: 'Body',
+      type: 'array',
+      of: [
+        { type: 'block' },
+        {
+          type: 'image',
+          fields: [
+            {
+              name: 'alt',
+              title: 'Alt',
+              type: 'text',
+              options: { isHighlighted: true },
+            },
+          ],
+        },
+      ],
+    },
   ],
 };
